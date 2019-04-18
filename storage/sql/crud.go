@@ -325,7 +325,7 @@ func getRefresh(q querier, id string) (storage.RefreshToken, error) {
 			id, client_id, scopes, nonce,
 			claims_user_id, claims_username, claims_email, claims_email_verified,
 			claims_groups,
-			connector_id,
+			connector_id, connector_data,
 			token, created_at, last_used
 		from refresh_token where id = $1;
 	`, id))
